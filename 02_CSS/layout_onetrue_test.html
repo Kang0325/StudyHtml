@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>One True Layout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        #header {
+            overflow: hidden;
+            background-color: darkseagreen;
+        }
+
+        #section {
+            overflow: hidden;
+        }
+
+        #aside {
+            float: left;
+            width: 200px;
+            background-color: blueviolet;
+        }
+
+        #content {
+            float: left;
+            width: 600px;
+            background-color: chocolate;
+        }
+
+        #footer {
+            background-color: cyan;
+        }
+
+        .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos cupiditate, reiciendis, fugit rem magni nemo provident corrupti officiis commodi necessitatibus repellendus officia iure ut nesciunt maiores dolor obcaecati natus?</div>
+    <div id="section" class="ellipsis">
+        <div id="aside" class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, exercitationem nihil! Eligendi ad harum magni! Perferendis omnis nulla obcaecati necessitatibus nihil soluta alias ea! Ipsam architecto molestiae dicta vero amet?</div>
+        <div id="content" class="ellipsis">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non adipisci, laborum enim ratione ipsa porro esse, provident eum alias autem natus maiores, doloribus impedit magni magnam consequuntur atque minima sunt!</div>
+    </div>
+    <div id="footer" class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia laborum aperiam repellendus, ipsum aliquam aliquid debitis voluptas sit esse, quaerat tenetur molestias! Voluptas temporibus debitis ut amet ex perspiciatis?</div>
+</body>
+</html>
