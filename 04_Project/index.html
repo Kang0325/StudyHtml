@@ -32,7 +32,7 @@
             });
 
             // 라이트박스
-            $(".paper").click(function() {showLightBox();});
+            $(".paper").click(function() {showLightBox(this);});
             $("#darken-background").click(function() {hideLightBox();});
 
             // 라이트박스 이벤트 서포트
@@ -41,11 +41,12 @@
             });
         });
 
-        function showLightBox() {
+        function showLightBox(obj) {
+            var img_src= obj.getElementsByTagName("img")[0].src;
             $("#random-image").attr({
                 src: function() {
-                    var rnd_height = 500+Math.floor(Math.random()*100);
-                    return "http://placekitten.com/600/" + rnd_height;
+                    //var rnd_height = 500+Math.floor(Math.random()*100);
+                    return img_src;//"http://placekitten.com/600/" + rnd_height;
                 }
             });
             $("#darken-background").show();
@@ -111,7 +112,7 @@
         <!-- 페이퍼 여러번 복사할 것-->
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/328"></a>
+                <a><img width="190" src="https://placekitten.com/190/328"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -123,7 +124,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/290"></a>
+                <a><img width="190" src="https://placekitten.com/190/290"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -135,7 +136,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/200"></a>
+                <a><img width="190" src="https://placekitten.com/190/200"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -147,7 +148,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/215"></a>
+                <a><img width="190" src="https://placekitten.com/190/215"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -159,7 +160,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/316"></a>
+                <a><img width="190" src="https://placekitten.com/190/316"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -171,7 +172,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/182"></a>
+                <a><img width="190" src="https://placekitten.com/190/182"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -183,7 +184,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/176"></a>
+                <a><img width="190" src="https://placekitten.com/190/176"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -195,7 +196,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/249"></a>
+                <a><img width="190" src="https://placekitten.com/190/249"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -207,7 +208,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/186"></a>
+                <a><img width="190" src="https://placekitten.com/190/186"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -219,7 +220,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/305"></a>
+                <a><img width="190" src="https://placekitten.com/190/305"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -231,7 +232,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/258"></a>
+                <a><img width="190" src="https://placekitten.com/190/258"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -243,7 +244,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/200"></a>
+                <a><img width="190" src="https://placekitten.com/190/200"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -255,7 +256,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/290"></a>
+                <a><img width="190" src="https://placekitten.com/190/290"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -267,7 +268,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/186"></a>
+                <a><img width="190" src="https://placekitten.com/190/186"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -279,7 +280,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/215"></a>
+                <a><img width="190" src="https://placekitten.com/190/215"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -291,7 +292,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/176"></a>
+                <a><img width="190" src="https://placekitten.com/190/176"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -303,7 +304,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/188"></a>
+                <a><img width="190" src="https://placekitten.com/190/188"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -315,7 +316,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/273"></a>
+                <a><img width="190" src="https://placekitten.com/190/273"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -327,7 +328,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/317"></a>
+                <a><img width="190" src="https://placekitten.com/190/317"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -339,7 +340,7 @@
         </div>
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="https://placekitten.com/190/258"></a>
+                <a><img width="190" src="https://placekitten.com/190/258"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
@@ -360,11 +361,11 @@
                 </a>
                 <div class="user-information-text">
                     <h3>User</h3>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus explicabo magnam ad aperiam atque harum, voluptatum at eum eaque non, facere totam amet, libero minima maxime odio ex voluptas facilis.</p>
                 </div>
             </div>
             <hr class="lightbox-splitter">
-            <img id="random-image" src="http://placekitten.com/600/750">
+            <img id="random-image" src="http://placekitten.com/600/750" width="600px">
         </div>
     </div>
 
